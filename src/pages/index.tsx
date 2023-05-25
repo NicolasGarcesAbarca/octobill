@@ -1,6 +1,8 @@
 import { FcGoogle } from 'react-icons/fc'
+import { useRouter } from 'next/router'
 
 export default function Home() {
+  const router = useRouter()
   return (
     <main className='w-full min-h-screen bg-gray-100 overflow-auto'>
       <header className='bg-orange-700'>
@@ -53,7 +55,8 @@ export default function Home() {
             <div className='mt-6'>
               <p className='text-sm text-center text-gray-600'>
                 ¿Aún no estas registrado?
-                <span className='text-orange-700 text-sm font-medium ml-1 hover:underline cursor-pointer'>
+                <span onClick={() => router.push('/register')}
+                  className='text-orange-700 text-sm font-medium ml-1 hover:underline cursor-pointer'>
                   Regístrate
                 </span>
               </p>
