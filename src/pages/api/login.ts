@@ -4,7 +4,6 @@ import { NextApiRequest, NextApiResponse } from "next";
 initAuth();
 
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {
-    console.log("login api called");
     try {
         await setAuthCookies(req, res);
     } catch (e) {

@@ -3,35 +3,7 @@ import { motion } from 'framer-motion'
 
 type FieldErrorType = FieldError['type']
 
-interface MESSAGE {
-    email: {
-        required: string
-        pattern: string
-    },
-    password: {
-        required: string
-        minLength: string
-    },
-    text: {
-        required: string
-    },
-}
-
-const MESSAGE: MESSAGE = {
-    email: {
-        required: 'Este campo es requerido',
-        pattern: 'El email no es valido'
-    },
-    password: {
-        required: 'Este campo es requerido',
-        minLength: 'La contraseña debe tener al menos 6 caracteres'
-    },
-    text: {
-        required: 'Este campo es requerido'
-
-    }
-}
-type Input = keyof MESSAGE
+type Input = 'email' | 'password' | 'text'
 
 type props = {
     error: FieldError | undefined
