@@ -9,4 +9,5 @@ export const firebaseConfig = {
     appId: process.env.NEXT_PUBLIC_APP_ID
 } as const;
 
+console.log({loginitapp:firebaseConfig});
 initializeApp(firebaseConfig);
